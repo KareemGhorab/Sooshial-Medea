@@ -1,0 +1,9 @@
+.control {
+	border-radius: 70% 0% 6% 10% / 5% 0% 14% 10%;
+}
+
+.control:focus {
+	-webkit-box-shadow: 0px 0px 0px 5px rgba(212, 208, 212, 1);
+	-moz-box-shadow: 0px 0px 0px 5px rgba(212, 208, 212, 1);
+	box-shadow: 0px 0px 0px 5px rgba(212, 208, 212, 1);
+}
