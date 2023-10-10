@@ -3,21 +3,40 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id             String @id @default(cuid())
-  email          String @unique
-  hashedPassword String
-  name           String
-  posts          Post[]
+  id                String         @id @default(cuid())
+  email             String         @unique
+  hashedPassword    String
+  name              String
+  posts             Post[]
+  profilePicture    String
+  outgoingRelations UserRelation[] @relation(name: "From")
+  incomingRelations UserRelation[] @relation(name: "To")
+}
+
+model UserRelation {
+  fromUser     User             @relation(fields: [fromUserId], references: [id], name: "From")
+  fromUserId   String
+  toUser       User             @relation(fields: [toUserId], references: [id], "To")
+  toUserId     String
+  relationship UserRelationship
+
+  @@id([fromUserId, toUserId])
 }
 
 model Post {
-  id       String @id @default(cuid())
+  id       String  @id @default(cuid())
   content  String
-  author   User   @relation(fields: [authorId], references: [id])
+  picture  String?
+  author   User    @relation(fields: [authorId], references: [id])
   authorId String
+}
+
+enum UserRelationship {
+  FRIEND
+  FOLLOW
 }
