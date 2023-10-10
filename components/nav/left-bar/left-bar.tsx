@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import LeftBarList from './left-bar-list'
 
 const LeftBar: React.FC<{ className?: string }> = ({
 	className,
@@ -9,7 +10,9 @@ const LeftBar: React.FC<{ className?: string }> = ({
 				'hidden md:flex border-r-2 border-primary-400',
 				className
 			)}
-		></section>
+		>
+			<LeftBarList />
+		</section>
 	)
 }
 

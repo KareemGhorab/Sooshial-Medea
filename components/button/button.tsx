@@ -4,14 +4,16 @@ import styles from './button.module.css'
 
 type Props = {
 	variant?: 'primary' | 'secondary'
+	type?: 'submit' | 'button'
 } & React.HtmlHTMLAttributes<HTMLButtonElement>
 
-const Button: React.FC<Props> = ({ variant = 'primary', ...props }) => {
+const Button: React.FC<Props> = ({ variant = 'primary', type, ...props }) => {
 	return (
 		<button
+			type={type}
 			{...props}
 			className={clsx(
-				'px-3 py-1 rounded-md text-xl',
+				'px-3 py-1 rounded-md text-xl flex justify-center items-center text-center',
 				styles.btn,
 				{
 					'border border-primary-400 bg-white text-primary-400 hover:bg-primary-400 hover:text-white hover:border-primary-400':
