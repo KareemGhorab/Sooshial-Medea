@@ -29,11 +29,12 @@ model UserRelation {
 }
 
 model Post {
-  id       String  @id @default(cuid())
-  content  String
-  picture  String?
-  author   User    @relation(fields: [authorId], references: [id])
-  authorId String
+  id          String   @id @default(cuid())
+  content     String
+  picture     String?
+  publishedAt DateTime
+  author      User     @relation(fields: [authorId], references: [id])
+  authorId    String
 }
 
 enum UserRelationship {
