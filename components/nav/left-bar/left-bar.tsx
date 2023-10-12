@@ -7,7 +7,7 @@ const LeftBar: React.FC<{ className?: string }> = ({
 	return (
 		<section
 			className={clsx(
-				'hidden md:flex border-r-2 border-primary-400',
+				'flex border-r-2 border-primary-400 bg-white',
 				className
 			)}
 		>

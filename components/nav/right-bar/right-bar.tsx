@@ -5,7 +5,7 @@ const RightBar: React.FC<{ className?: string }> = ({
 }): JSX.Element => (
 	<section
 		className={clsx(
-			'hidden md:flex border-l-2 border-primary-400',
+			'border-l-2 border-primary-400 bg-white',
 			className
 		)}
 	></section>
