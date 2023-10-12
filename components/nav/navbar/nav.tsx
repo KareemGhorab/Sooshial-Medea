@@ -28,9 +28,6 @@ const Nav: React.FC<Props> = ({
 				className
 			)}
 		>
-			<Link href='/' className='hidden md:block'>
-				<H1 title='Sooshial Medea' />
-			</Link>
 			<Button
 				rounded
 				className='md:hidden'
@@ -44,6 +41,9 @@ const Nav: React.FC<Props> = ({
 			>
 				<PiListThin></PiListThin>
 			</Button>
+			<Link href='/'>
+				<H1 title='Sooshial Medea' />
+			</Link>
 			<Button
 				rounded
 				className='md:hidden'
