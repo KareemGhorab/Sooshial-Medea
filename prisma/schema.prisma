@@ -7,13 +7,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-
 model User {
-  id                String         @id @default(cuid())
-  email             String         @unique
+  username          String         @id @unique
   hashedPassword    String
-  name              String
   posts             Post[]
   profilePicture    String
   outgoingRelations UserRelation[] @relation(name: "From")
@@ -21,9 +17,9 @@ model User {
 }
 
 model UserRelation {
-  fromUser     User             @relation(fields: [fromUserId], references: [id], name: "From")
+  fromUser     User             @relation(fields: [fromUserId], references: [username], name: "From")
   fromUserId   String
-  toUser       User             @relation(fields: [toUserId], references: [id], "To")
+  toUser       User             @relation(fields: [toUserId], references: [username], "To")
   toUserId     String
   relationship UserRelationship
 
@@ -35,7 +31,7 @@ model Post {
   content     String
   picture     String?
   publishedAt DateTime
-  author      User     @relation(fields: [authorId], references: [id])
+  author      User     @relation(fields: [authorId], references: [username])
   authorId    String
 }
 

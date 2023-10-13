@@ -36,6 +36,15 @@ export const POST = (req: NextRequest) =>
 		if (userExist)
 			throw new Error('This email address is already registered')
 
+		const nameExist = await prisma.user.findUnique({
+			where: {
+				name,
+			},
+		})
+
+		if (nameExist)
+			throw new Error('This name is taken')
+
 		// Hash Password
 		const hashedPassword = bcrypt.hashSync(
 			password,
@@ -48,6 +57,9 @@ export const POST = (req: NextRequest) =>
 				name,
 				email,
 				hashedPassword,
+				profilePicture: `https://ui-avatars.com/api/?name=${name
+					.split(' ')
+					.join('+')}`,
 			},
 		})
 

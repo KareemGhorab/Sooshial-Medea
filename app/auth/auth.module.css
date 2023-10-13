@@ -1,7 +1,0 @@
-.form small {
-	@apply text-red-500;
-}
-
-.extra {
-	@apply text-center text-lg flex gap-2 justify-center items-center;
-}
