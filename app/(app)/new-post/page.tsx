@@ -28,7 +28,9 @@ const NewPost: React.FC = (): JSX.Element => {
 				onBlur={handleBlur}
 				placeholder='What do you want to post?'
 			/>
-			<Button type='submit'>Post</Button>
+			<Button type='submit' className='w-40 ml-auto'>
+				Post
+			</Button>
 		</form>
 	)
 }
