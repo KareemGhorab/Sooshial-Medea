@@ -13,32 +13,32 @@ const AppLayout: React.FC<React.PropsWithChildren> = ({
 	const [menusState, setMenusState] = useState<MenusState>(MenusState.NONE)
 	return (
 		<div>
-			<div className='fixed inset-0 z-50 flex flex-wrap justify-between md:grid md:grid-cols-[minmax(0,_1fr),_minmax(0,_3fr),_minmax(0,_1fr)] md:grid-rows-[100px,_minmax(0,_1fr)]'>
-				<Nav
-					className='md:col-start-2 col-span-1 w-full'
-					menusState={menusState}
-					setMenusState={setMenusState}
-				/>
-				<LeftBar
-					className={clsx(
-						'md:col-start-1 md:w-full w-40 h-full transition-transform duration-100',
-						{
-							'-translate-x-40 md:translate-x-0':
-								menusState !== MenusState.LEFT,
-						}
-					)}
-				/>
-				<RightBar
-					className={clsx(
-						'md:col-start-3 md:w-full w-40 h-full transition-transform duration-100',
-						{
-							'translate-x-40 md:translate-x-0':
-								menusState !== MenusState.RIGHT,
-						}
-					)}
-				/>
+			<Nav
+				className='md:h-[120px] md:w-3/5 w-full fixed z-50 md:-translate-x-1/2 md:left-1/2'
+				menusState={menusState}
+				setMenusState={setMenusState}
+			/>
+			<LeftBar
+				className={clsx(
+					'md:w-1/5 w-40 md:top-[118px] top-[45px] min-h-screen transition-transform duration-100 fixed',
+					{
+						'-translate-x-40 md:translate-x-0':
+							menusState !== MenusState.LEFT,
+					}
+				)}
+			/>
+			<RightBar
+				className={clsx(
+					'fixed right-0 md:w-1/5 md:top-[120px] top-[45px] w-40 min-h-screen transition-transform duration-100',
+					{
+						'translate-x-40 md:translate-x-0':
+							menusState !== MenusState.RIGHT,
+					}
+				)}
+			/>
+			<div className='pt-24 md:pt-40 mx-auto md:w-3/5 px-7'>
+				<div className='w-full max-w-[600px] mx-auto'>{children}</div>
 			</div>
-			<div className='pt-32 w-3/5 mx-auto'>{children}</div>
 		</div>
 	)
 }

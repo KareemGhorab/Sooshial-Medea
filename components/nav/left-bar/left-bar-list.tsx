@@ -26,7 +26,7 @@ const list: LeftBarListItemProps[] = [
 	{
 		children: <PiPaperPlaneTiltThin />,
 		label: 'New Post',
-		url: '/post',
+		url: '/new-post',
 	},
 	{
 		children: <PiChatThin />,
