@@ -1,5 +1,6 @@
 .control {
 	border-radius: 70% 0% 6% 10% / 5% 0% 14% 10%;
+	@apply border-2 border-primary-400 px-2 w-full focus:outline-none transition-all duration-200;
 }
 
 .control:focus {

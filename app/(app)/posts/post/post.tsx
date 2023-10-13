@@ -10,14 +10,14 @@ type Props = {
 }
 
 const Post: React.FC<Props> = ({
-	post: { content, id, author, image },
+	post: { content, id, author, picture },
 	className,
 }): JSX.Element => (
 	<li className={clsx('w-full', className)}>
 		<article>
-			<Card className='w-full max-w-[600px] mx-auto flex flex-col gap-5'>
+			<Card className='w-full flex flex-col gap-5'>
 				<PostHeader author={author} />
-				<PostBody image={image} content={content} />
+				<PostBody image={picture} content={content} />
 			</Card>
 		</article>
 	</li>
