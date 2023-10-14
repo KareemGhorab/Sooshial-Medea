@@ -1,5 +1,5 @@
 export type TFriendRequest = {
-	id: string
+	id?: string
 	senderUsername: string
 	receiverUsername: string
 }

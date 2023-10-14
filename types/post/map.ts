@@ -20,23 +20,3 @@ export const mapToPost = ({
 	publishedAt: published_at,
 	images,
 })
-
-export const mapToPostResponse = ({
-	authorImage,
-	authorUsername,
-	commentsCount,
-	content,
-	id,
-	likesCount,
-	publishedAt,
-	images,
-}: TPost): TPostResponse => ({
-	author_image: authorImage,
-	author_username: authorUsername,
-	comments_count: commentsCount,
-	content,
-	id,
-	likes_count: likesCount,
-	published_at: publishedAt,
-	images,
-})

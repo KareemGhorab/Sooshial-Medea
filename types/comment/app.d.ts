@@ -1,5 +1,5 @@
 export type TComment = {
-	id: string
+	id?: string
 	content: string
 	authorUsername: string
 	authorImage: string

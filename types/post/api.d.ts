@@ -1,5 +1,5 @@
 export type TPostResponse = {
-	id: string
+	id?: string
 	content: string
 	images?: string[]
 	author_username: string

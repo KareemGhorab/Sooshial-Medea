@@ -1,5 +1,5 @@
 export type TCommentResponse = {
-	id: string
+	id?: string
 	content: string
 	author_username: string
 	author_image: string

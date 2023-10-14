@@ -12,15 +12,3 @@ export const mapToUser = ({
 	image,
 	username,
 })
-
-export const mapToUserResponse = ({
-	bio,
-	friendsCount,
-	image,
-	username,
-}: TUser): TUserResponse => ({
-	bio,
-	friends_count: friendsCount,
-	image,
-	username,
-})

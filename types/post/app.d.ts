@@ -1,5 +1,5 @@
 export type TPost = {
-	id: string
+	id?: string
 	content: string
 	images?: string[]
 	authorUsername: string

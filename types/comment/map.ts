@@ -16,19 +16,3 @@ export const mapToComment = ({
 	likesCount: likes_count,
 	publishedAt: published_at,
 })
-
-export const mapToCommentResponse = ({
-	authorImage,
-	authorUsername,
-	content,
-	id,
-	likesCount,
-	publishedAt,
-}: TComment): TCommentResponse => ({
-	author_image: authorImage,
-	author_username: authorUsername,
-	content,
-	id,
-	likes_count: likesCount,
-	published_at: publishedAt,
-})

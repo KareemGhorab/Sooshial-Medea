@@ -10,13 +10,3 @@ export const mapToFriendRequest = ({
 	receiverUsername: receiver_username,
 	senderUsername: sender_username,
 })
-
-export const mapToFriendRequestResponse = ({
-	id,
-	receiverUsername,
-	senderUsername,
-}: TFriendRequest): TFriendRequestResponse => ({
-	id,
-	receiver_username: receiverUsername,
-	sender_username: senderUsername,
-})
