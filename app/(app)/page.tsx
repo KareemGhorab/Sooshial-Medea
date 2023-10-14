@@ -5,11 +5,10 @@ import { AxiosError } from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import { PiSpinnerGapThin } from 'react-icons/pi'
 
-import { TPost } from '@/types/app'
-import { getPosts } from '@/service/post'
 import { toastOptions } from '@/utils/toast'
-
-import PostList from './posts/post-list'
+import { getFeed } from '@/service/post'
+import { TPost } from '@/types/post/app'
+import PostList from './components/posts/post-list'
 
 const Feed: React.FC = (): JSX.Element => {
 	const [posts, setPosts] = useState<TPost[]>([])
@@ -18,19 +17,21 @@ const Feed: React.FC = (): JSX.Element => {
 
 	useEffect(() => {
 		setLoading(true)
-		getPosts(pageNumber, '')
-			.then((data) => setPosts((op) => [...op, ...data]))
+		getFeed(1, '')
+			.then((data: TPost[]) =>
+				pageNumber === 1
+					? setPosts(data)
+					: setPosts((op) => [...op, ...data])
+			)
 			.catch((err: AxiosError) => {
 				if (err.response?.status === 404) return
 				toast.error(err?.message, toastOptions)
 			})
 			.finally(() => setLoading(false))
-	}, [])
-
-	console.log(posts)
+	}, [pageNumber])
 
 	return (
-		<section className='flex justify-center px-10 pb-10'>
+		<section className='flex justify-center px-2 md:px-6 pb-10'>
 			<ToastContainer />
 			{posts.length ? (
 				<PostList posts={posts} />

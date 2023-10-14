@@ -5,7 +5,7 @@ import { TUserResponse } from '@/types/user/api'
 
 export const dummyPosts: TPostResponse[] = [
 	{
-		author_image: 'https://placehold.co/600x400',
+		author_image: 'https://placehold.co/400x400',
 		author_username: 'Kareem Ghorab',
 		comments_count: 5,
 		content:
@@ -14,9 +14,9 @@ export const dummyPosts: TPostResponse[] = [
 		likes_count: 625,
 		published_at: '10/14/2023',
 		images: [
-			'https://placehold.co/600x400',
+			'https://placehold.co/400x400',
 			'https://placehold.co/500x500',
-			'https://placehold.co/400x600',
+			'https://placehold.co/600x600',
 		],
 	},
 ]
@@ -80,21 +80,21 @@ export const dummyFriendRequests: TFriendRequestResponse[] = [
 	{
 		id: 'frq-1',
 		receiver_username: 'Kareem Ghorab',
-		sender_username: 'Someone Someone'
+		sender_username: 'Someone Someone',
 	},
 	{
 		id: 'frq-2',
 		receiver_username: 'Kareem Ghorab',
-		sender_username: 'Someone Someone 2'
+		sender_username: 'Someone Someone 2',
 	},
 	{
 		id: 'frq-3',
 		receiver_username: 'Kareem Ghorab',
-		sender_username: 'Someone Someone 3'
+		sender_username: 'Someone Someone 3',
 	},
 	{
 		id: 'frq-4',
 		receiver_username: 'Kareem Ghorab',
-		sender_username: 'Someone Someone 4'
+		sender_username: 'Someone Someone 4',
 	},
 ]

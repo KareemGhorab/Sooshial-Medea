@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { TPost } from '@/types/app'
+import { TPost } from '@/types/post/app'
 import Post from './post/post'
 
 type Props = {

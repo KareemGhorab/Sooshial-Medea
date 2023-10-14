@@ -6,17 +6,11 @@ import LeftBar from '@/components/nav/left-bar/left-bar'
 import { useState } from 'react'
 import { MenusState } from '@/components/nav/menus-state'
 import clsx from 'clsx'
-import { useSession } from 'next-auth/react'
-import { redirect } from 'next/navigation'
 
 const AppLayout: React.FC<React.PropsWithChildren> = ({
 	children,
 }): JSX.Element => {
 	const [menusState, setMenusState] = useState<MenusState>(MenusState.NONE)
-	const session = useSession()
-
-	if (!session?.data?.user) return redirect('/api/auth/signin')
-
 	return (
 		<>
 			<Nav
@@ -42,7 +36,7 @@ const AppLayout: React.FC<React.PropsWithChildren> = ({
 					}
 				)}
 			/>
-			<div className='pt-24 md:pt-40 mx-auto md:w-3/5 px-7'>
+			<div className='pt-24 md:pt-40 mx-auto md:w-3/5'>
 				<div className='w-full max-w-[600px] mx-auto'>{children}</div>
 			</div>
 		</>
