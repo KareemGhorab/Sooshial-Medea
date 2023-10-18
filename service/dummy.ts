@@ -19,6 +19,66 @@ export const dummyPosts: TPostResponse[] = [
 			'https://placehold.co/600x600',
 		],
 	},
+	{
+		author_image: 'https://placehold.co/400x400',
+		author_username: 'Kareem Ghorab',
+		comments_count: 5,
+		content:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		id: 'pst-2',
+		likes_count: 625,
+		published_at: '10/14/2023',
+		images: [
+			'https://placehold.co/400x400',
+			'https://placehold.co/500x500',
+			'https://placehold.co/600x600',
+		],
+	},
+	{
+		author_image: 'https://placehold.co/400x400',
+		author_username: 'Kareem Ghorab',
+		comments_count: 5,
+		content:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		id: 'pst-3',
+		likes_count: 625,
+		published_at: '10/14/2023',
+		images: [
+			'https://placehold.co/400x400',
+			'https://placehold.co/500x500',
+			'https://placehold.co/600x600',
+		],
+	},
+	{
+		author_image: 'https://placehold.co/400x400',
+		author_username: 'Kareem Ghorab',
+		comments_count: 5,
+		content:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		id: 'pst-4',
+		likes_count: 625,
+		published_at: '10/14/2023',
+		images: [
+			'https://placehold.co/400x400',
+			'https://placehold.co/500x500',
+			'https://placehold.co/600x600',
+		],
+	},
+	{
+		author_image: 'https://placehold.co/400x400',
+		author_username: 'Kareem Ghorab',
+		comments_count: 5,
+		content:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		id: 'pst-5',
+		likes_count: 625,
+		published_at: '10/14/2023',
+		images: [
+			'https://placehold.co/400x400',
+			'https://placehold.co/500x500',
+			'https://placehold.co/600x600',
+		],
+	},
 ]
 
 export const dummyUser: TUserResponse = {
