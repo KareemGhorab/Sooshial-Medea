@@ -6,6 +6,10 @@ export const whoami = async (): Promise<TUser> => {
 	return Promise.resolve(mapToUser(dummyUser))
 }
 
+export const getUser = async (username: string): Promise<TUser> => {
+	return Promise.resolve(mapToUser(dummyUser))
+}
+
 export const changeImage = async (image: string) => {
 	return Promise.resolve()
 }

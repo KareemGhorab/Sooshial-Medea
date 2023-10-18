@@ -6,7 +6,14 @@ type Props = {
 }
 
 const H2: React.FC<Props> = ({ title }): JSX.Element => (
-	<h2 className={clsx(cabin.className, 'text-6xl')}>{title}</h2>
+	<h2
+		className={clsx(
+			cabin.className,
+			'text-2xl md:text-4xl lg:text-6xl text-center'
+		)}
+	>
+		{title}
+	</h2>
 )
 
 export default H2
